@@ -9,6 +9,8 @@
 /coverage
 /artifacts
 
+/cache
+
 # production
 /build
 
