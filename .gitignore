@@ -7,7 +7,7 @@
 
 # testing
 /coverage
-/artifacts
+src/artifacts
 
 /cache
 
