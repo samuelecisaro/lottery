@@ -23,14 +23,14 @@ export default function App() {
   };
 
   const selectWinner = async () => {
-    const balance = await contract.current.selectWinner();
+    await contract.current.selectWinner();
   };
 
   useEffect(() => {
     const setup = async () => {
       const provider = new ethers.providers.JsonRpcProvider();
       const network = await provider.getNetwork();
-      // instantiate contract instance and assign to component ref variable
+      
       contract.current = new ethers.Contract(
         lotteryContract,
         Lottery.abi,
@@ -51,13 +51,13 @@ export default function App() {
         <br></br>
         <div className="row">
           <div className="col-12 col-md-4 col-lg-4">
-            <button className="btn btn-primary" onClick={sendToken}>Send Tokens</button>
+            <button className="btn btn-primary btn-purple" onClick={sendToken}>Send Tokens</button>
           </div>
           <div className="col-12 col-md-4 col-lg-4">
-            <button className="btn btn-primary" onClick={getLotteryBalance}>Update balance</button>
+            <button className="btn btn-primary btn-purple" onClick={getLotteryBalance}>Update balance</button>
           </div>
           <div className="col-12 col-md-4 col-lg-4">
-            <button className="btn btn-primary" onClick={selectWinner}>Select winner</button>
+            <button className="btn btn-primary btn-purple" onClick={selectWinner}>Select winner</button>
           </div>
         </div>
     </div>

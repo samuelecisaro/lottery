@@ -15,3 +15,13 @@ code {
 body section {
   background-image: url('./purple.jpeg');
 }
+
+.btn-purple {
+  background-color: #562AA7;
+  border-color: #562AA7;
+}
+
+.btn-purple:hover {
+  background-color: #2E21AC;
+  border-color: #2E21AC;
+}
